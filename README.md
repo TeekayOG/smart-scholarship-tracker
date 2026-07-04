@@ -43,3 +43,19 @@ java -jar target/smart-scholarship-tracker-1.0-SNAPSHOT.jar
 ```bash
 mvn test
 ```
+
+## Project Structure
+
+```text
+src/main/java/com/scholarshiptracker/
+  model/
+  strategy/
+  observer/
+  service/
+  controller/
+  view/
+  api/
+  exception/
+```
+
+The structure separates the application into model, service, controller, view, API, strategy, observer, and exception layers.
