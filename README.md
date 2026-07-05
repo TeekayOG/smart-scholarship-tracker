@@ -59,3 +59,56 @@ src/main/java/com/scholarshiptracker/
 ```
 
 The structure separates the application into model, service, controller, view, API, strategy, observer, and exception layers.
+
+## Demo Flow
+
+The application currently demonstrates the main scholarship application flow:
+
+1. Open the Smart Scholarship Tracker application.
+2. Enter student details in the Application tab.
+3. Select a scholarship type.
+4. Submit the application.
+5. View the eligibility result screen.
+6. Open the Notifications tab to view the status-change notification.
+7. Open the University API tab to fetch university data from an external REST API.
+
+## External API
+
+The project uses the public Universities API:
+
+```text
+http://universities.hipolabs.com/search?country=Malaysia
+```
+
+The API is used to demonstrate REST API integration and JSON parsing. If the API is unavailable, the application displays a user-friendly fallback message instead of showing a Java stack trace.
+
+## Current Scholarship Rules
+
+```text
+Merit Scholarship:
+GPA >= 3.70
+
+Need-Based Scholarship:
+GPA >= 3.00
+Household income <= 4000
+
+Balanced Scholarship:
+GPA >= 3.30
+Household income <= 6000
+```
+
+## MVC Structure
+
+```text
+Model:
+Student, Scholarship, ScholarshipApplication, EligibilityResult
+
+View:
+ApplicationFormView, ResultView, NotificationView, UniversityLookupView, MainFrame
+
+Controller:
+ApplicationController
+
+Service:
+ApplicationService, EligibilityService, ApplicationValidator, UniversityLookupService
+```
