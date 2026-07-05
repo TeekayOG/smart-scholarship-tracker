@@ -1,5 +1,9 @@
 package com.scholarshiptracker;
 
+import com.scholarshiptracker.view.MainFrame;
+
+import javax.swing.*;
+
 /**
  * Entry point for the Smart Scholarship Tracker application.
  */
@@ -11,6 +15,6 @@ public class Main {
      * @param args command-line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Smart Scholarship Tracker started successfully.");
+        SwingUtilities.invokeLater(() -> new MainFrame().setVisible(true));
     }
 }
