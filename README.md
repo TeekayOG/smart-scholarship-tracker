@@ -112,3 +112,17 @@ ApplicationController
 Service:
 ApplicationService, EligibilityService, ApplicationValidator, UniversityLookupService
 ```
+
+
+## Setup and Run Instructions
+
+### Requirements
+
+- Java 17 or newer
+- Maven
+- Git
+
+### Run Tests
+
+```bash
+mvn test
